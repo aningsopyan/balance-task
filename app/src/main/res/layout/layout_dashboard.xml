@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:text="Balance"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Rp. 0"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+    </TableRow>
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@id/tableRow">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Dashboard">
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/style_linear_data"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="20dp"
+                    android:text="Overview Income"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_income"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#000">
+
+                        <TextView
+                            android:layout_height="2dp"/>
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="TOTAL"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:text=""
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/total_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Rp. 0"
+                            android:textColor="#000" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/style_linear_data"
+            android:gravity="center_horizontal"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="20dp"
+                    android:text="Overview Expenses"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_expenses"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#000">
+
+                        <TextView
+                            android:layout_height="2dp"/>
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="TOTAL"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:text=""
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:id="@+id/total_expenses"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Rp. 0"
+                            android:textColor="#000" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>
